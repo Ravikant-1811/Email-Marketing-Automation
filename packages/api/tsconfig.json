@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": ["es2018"],
+    "types": ["node", "mocha"],
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "api": ["../api"],
+      "api/*": ["../api/*"],
+      "campaign": ["../common/campaign"],
+      "campaign/*": ["../common/campaign/*"],
+      "common": ["../"],
+      "common/*": ["../common/*"],
+      "filters/*": ["../common/filters/*"],
+      "filters": ["../common/filters"],
+      "ui": ["../ui"],
+      "ui/*": ["../ui/*"],
+      "src/*": ["src/*"]
+    },
+    "plugins": [{ "transform": "transformer-module" }]
+  },
+  "files": [],
+  "include": [
+    "modules.d.ts",
+    "src/**/*",
+    "scripts/**/*",
+    "tests/",
+    "./node_modules/@types"
+  ],
+  "exclude": [
+    "node_modules",
+    "./node_modules",
+    "./node_modules/*",
+    "./node_modules/@types/node/index.d.ts"
+  ],
+  "references": [
+    {
+      "path": "../common"
+    }
+  ],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+}

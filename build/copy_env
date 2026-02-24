@@ -1,0 +1,5 @@
+touch ./packages/api/.env && rm ./packages/api/.env
+touch ./packages/ui/.env && rm ./packages/ui/.env
+
+cp ./packages/api/.env.example ./packages/api/.env
+cp ./packages/ui/.env.example ./packages/ui/.env

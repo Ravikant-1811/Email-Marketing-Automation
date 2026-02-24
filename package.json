@@ -1,0 +1,27 @@
+{
+  "name": "email-marketing-automation",
+  "private": true,
+  "version": "0.1.1",
+  "description": "Marketing automation tool for data-driven marketers.",
+  "homepage": "https://github.com/Ravikant-1811/Email-Marketing-Automation",
+  "scripts": {
+    "bootstrap": "lerna exec yarn install",
+    "build": "lerna run build",
+    "dev": "lerna run dev --parallel",
+    "test": "lerna run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ravikant-1811/Email-Marketing-Automation.git"
+  },
+  "author": {
+    "name": "Ravikant Upadhyay"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/Ravikant-1811/Email-Marketing-Automation/issues"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}

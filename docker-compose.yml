@@ -1,0 +1,46 @@
+version: "3"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - 3000:3000
+    container_name: sequence-api
+    depends_on:
+      - postgres
+    networks:
+      - backend
+      - frontend
+  postgres:
+    image: postgres
+    networks:
+      - backend
+    ports:
+      - "5432:5432"
+    expose:
+      - 5432
+  redis:
+    image: redis
+    networks:
+      - backend
+    ports:
+      - "6379:6379"
+    expose:
+      - 6379
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+    ports:
+      - "8000:8000"
+    container_name: sequence-ui
+    networks:
+      - frontend
+    environment:
+      PORT: 8000
+    expose:
+      - 8000
+networks:
+  frontend:
+  backend:
